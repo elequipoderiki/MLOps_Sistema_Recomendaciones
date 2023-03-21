@@ -1,1 +1,3 @@
-### Interfaz de usuario que presenta el modelo de recomendación generado en el proyecto de EDA a partir de datasets de plataforma Amazon y varios datasets de ratings historicos
+### Interfaz de usuario que presenta el modelo de recomendación generado en el proyecto de EDA a partir de datasets de plataforma Amazon y varios datasets de ratings historicos. 
+
+El modelo se construyó empleando el algoritmo SVD, que es adecuado para casos como el nuestro pues tenemos gran cantidad de features, cada columna representa si el usuario califico cierta pelicula y hay muchas peliculas. Por otro lado hay muchas filas pues registramos gran cantidad de usuarios. Entonces con este modelo podemos reducir estas dimensiones y realizar un proceso de gran poder y de bajo consumo de recursos.
