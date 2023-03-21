@@ -22,7 +22,7 @@ def peli_mayor_duracion(df, anio, tipo_duracion):
   pelis = df[df.duration_type == tipo_duracion]
 
   #si filtro año es requerido
-  if (len(anio) > 0):
+  if (anio > 0):
   
     pelis = pelis[pelis.release_year == anio]
   
@@ -109,7 +109,7 @@ def cantidad_mayor_rating_xanio(id_pelis, score):
 
 
 #FUNCION 1
-def mayor_duracion(year:str , platform:str , duration_type:str ):
+def mayor_duracion(year:int , platform:str , duration_type:str ):
   """
   funcion que obtiene pelicula con mayor duracion con filtros de año, plataforma y tipo duracion
 
@@ -214,7 +214,9 @@ def actor_mas_apariciones(platform, year):
     cast[item] += 1
   
   #obtenemos el actor con mas apariciones
-  return max(cast.items(), key=lambda a:a[1])
+  res = max(cast.items(), key=lambda a:a[1])
+  return pd.DataFrame({'actor':res[0], 'apariciones':res[1]},index=[0])
+
     
       
 

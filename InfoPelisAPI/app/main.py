@@ -117,8 +117,7 @@ def get_count_platform(filtro: FiltrosMayorCantidad):
 
 def get_actor(filtro: FiltrosMayorActor):
 
-    return actor_mas_apariciones(filtro.platform, filtro.year)
-
+    return Response(actor_mas_apariciones( filtro.platform, filtro.year).to_json(orient="records"), media_type="application/json")
 
 
 

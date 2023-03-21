@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import Optional
 
 class FiltrosMayorDuracion(BaseModel):
-	year: Optional[str]=''
+	year: Optional[int]=0
 	platform: Optional[str]='amazon'
 	duration_type: Optional[str]='min'
 	
